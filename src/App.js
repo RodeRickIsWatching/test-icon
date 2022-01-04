@@ -12,6 +12,8 @@ const Container = styled.ul`
   margin: 0;
   padding: 0 0 50px 0;
   list-style: none;
+  background: #000;
+  color: #fff;
 `
 
 class List extends React.Component {
