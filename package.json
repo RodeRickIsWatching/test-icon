@@ -8,8 +8,8 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/leadream/juuust-react-icon.git",
-  "author": "leadream",
+  "repository": "https://github.com/RodeRickIsWatching/juuust-react-icon.git",
+  "author": "RodeRickIsWatching",
   "keywords": [
     "react",
     "icons",
@@ -20,9 +20,9 @@
     "design"
   ],
   "bugs": {
-    "url": "https://github.com/leadream/juuust-react-icon/issues"
+    "url": "https://github.com/RodeRickIsWatching/juuust-react-icon/issues"
   },
-  "homepage": "https://github.com/leadream/juuust-react-icon#readme",
+  "homepage": "https://github.com/RodeRickIsWatching/juuust-react-icon#readme",
   "scripts": {
     "fetch": "node bin/fetchSVG.js",
     "generate": "sudo rm -rf src/icons && node bin/build.js",
