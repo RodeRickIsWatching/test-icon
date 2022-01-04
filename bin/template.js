@@ -42,7 +42,7 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
   }
 
   ${ComponentName}.defaultProps = {
-    color: 'currentColor',
+    // color: 'currentColor',
     size: '24',
   }
 
