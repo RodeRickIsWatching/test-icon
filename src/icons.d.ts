@@ -23,6 +23,8 @@ export const IconArrowDown: Icon;
 export const IconArrowUp: Icon;
 export const IconArrowLeft: Icon;
 export const IconArrowRight: Icon;
+export const IconArrowD: Icon;
+export const IconArrowU: Icon;
 export const CoinToken1: Icon;
 export const CoinToken0: Icon;
 export const IconToastNor: Icon;

@@ -14,6 +14,8 @@ export { default as IconArrowDown } from './icons/icon-arrow_down';
 export { default as IconArrowUp } from './icons/icon-arrow_up';
 export { default as IconArrowLeft } from './icons/icon-arrow_left';
 export { default as IconArrowRight } from './icons/icon-arrow_right';
+export { default as IconArrowD } from './icons/icon-arrow_d';
+export { default as IconArrowU } from './icons/icon-arrow_u';
 export { default as CoinToken1 } from './icons/coin-Token1';
 export { default as CoinToken0 } from './icons/coin-Token0';
 export { default as IconToastNor } from './icons/icon-Toast_nor';

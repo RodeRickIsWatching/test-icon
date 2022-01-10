@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IconToastLoading = (props) => {
+const IconArrowD = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -13,23 +13,21 @@ const IconToastLoading = (props) => {
       {...otherProps}
     >
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12 2.75a9.25 9.25 0 000 18.5 9.254 9.254 0 008.827-6.475.75.75 0 111.43.45C20.889 19.585 16.816 22.75 12 22.75 6.063 22.75 1.25 17.937 1.25 12S6.063 1.25 12 1.25c1.174 0 2.306.189 3.366.538a.75.75 0 01-.47 1.424A9.24 9.24 0 0012 2.75z"
-        fill="#24AE64"
+        d="M13.6 16.867a2 2 0 01-3.2 0l-5-6.667C4.411 8.882 5.352 7 7 7h10c1.648 0 2.589 1.882 1.6 3.2l-5 6.667z"
+        fill="#fff"
       ></path>
     </svg>
   );
 };
 
-IconToastLoading.propTypes = {
+IconArrowD.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-IconToastLoading.defaultProps = {
+IconArrowD.defaultProps = {
   // color: 'currentColor',
   size: '24',
 };
 
-export default IconToastLoading;
+export default IconArrowD;
