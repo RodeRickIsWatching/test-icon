@@ -1,0 +1,21 @@
+{
+  "name": "@glhf-libs/all-files",
+  "version": "0.0.5",
+  "description": "SVG React icons of popular icon packs using ES6 imports",
+  "author": "glhf",
+  "license": "MIT",
+  "main": "lib",
+  "types": "./lib/esm/index.d.ts",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:react-icons/react-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/react-icons/react-icons/issues"
+  },
+  "homepage": "https://github.com/react-icons/react-icons#readme",
+  "peerDependencies": {
+    "react": "*"
+  }
+}

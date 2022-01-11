@@ -3,6 +3,10 @@ import styled from "styled-components";
 import * as icons from "./icons";
 import Header from "./components/Header";
 import IconWrapper from "./components/IconWrapper";
+import {CoinBtc} from '@glhf-libs/test-icon/coin'
+// import * as Icon from '@glhf-libs/test-icon/icon'
+
+
 
 const Container = styled.ul`
   display: grid;
@@ -18,6 +22,7 @@ const Container = styled.ul`
 
 class List extends React.Component {
   render() {
+  console.log('Coin', Coin)
     return (
       <div style={{ background: "#000", color: "#fff" }}>
         <Header />
@@ -33,6 +38,10 @@ class List extends React.Component {
               </li>
             );
           })}
+        </Container>
+        <h1>test-icons</h1>
+        <Container>
+          <CoinBtc></CoinBtc>
         </Container>
       </div>
     );

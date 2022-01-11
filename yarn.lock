@@ -1160,10 +1160,10 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
-"@glhf-libs/test-icon@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@glhf-libs/test-icon/-/test-icon-0.0.4.tgz#1fd405cc80ce337929c4e1bf3c09116191c47014"
-  integrity sha512-mtTTR+WvE2RyCWVfstCQH6N/JAdwkPzV3T50qABqtQIKvJPcE+JqoYPhP69ZQCQLk1YD07XFez2Cmd8UJxG6XQ==
+"@glhf-libs/test-icon@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@glhf-libs/test-icon/-/test-icon-0.0.5.tgz#4c0e086b9de748d6eb6bc2569068b6ab4ed132b4"
+  integrity sha512-W6q/Xw16a9PbjRqtQW1Ejlx2KW7GEYYOhKUAt9YxrL7hUdESVi6uU9gWS6OXeHqfXDr20ms87bhCPS/gXM6rqQ==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
