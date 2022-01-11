@@ -71,7 +71,6 @@ async function writeIconModule(icon, { DIST, LIB, rootDir }) {
 
   const exists = new Set(); // for remove duplicate
   for (const content of icon.contents) {
-    // todo 获取figma
     const files = await getIconFiles(content);
 
     for (const file of files) {

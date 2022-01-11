@@ -123,28 +123,31 @@ client
                 const type = component.name.split("-")[0];
                 ensureDir(join(options.outputDir, options.format, type)).then(
                   () => {
-                    // 2.0
-                    writeFile(
-                      join(
-                        options.outputDir,
-                        options.format,
-                        type,
-                        `${component.name}.${options.format}`
-                      ),
-                      response.body,
-                      options.format === "svg" ? "utf8" : "binary"
-                    );
+                    ensureDir(
+                      join("./packages/react-icons/src/icons", type)
+                    ).then(() => {
+                      // 2.0
+                      writeFile(
+                        join(
+                          "./packages/react-icons/src/icons",
+                          type,
+                          `${component.name}.${options.format}`
+                        ),
+                        response.body,
+                        options.format === "svg" ? "utf8" : "binary"
+                      );
 
-                    // 1.0
-                    writeFile(
-                      join(
-                        options.outputDir,
-                        options.format,
-                        `${component.name}.${options.format}`
-                      ),
-                      response.body,
-                      options.format === "svg" ? "utf8" : "binary"
-                    );
+                      // 1.0
+                      writeFile(
+                        join(
+                          options.outputDir,
+                          options.format,
+                          `${component.name}.${options.format}`
+                        ),
+                        response.body,
+                        options.format === "svg" ? "utf8" : "binary"
+                      );
+                    });
                   }
                 );
               }

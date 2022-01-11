@@ -53,8 +53,8 @@ export function IconBase(props) {
     if (conf.className) className = conf.className;
     if (props.className) className = (className ? className + ' ' : '') + props.className;
     return React.createElement("svg", __assign({
-      stroke: "currentColor",
-      fill: "currentColor",
+      // stroke="currentColor"
+      // fill="currentColor"
       strokeWidth: "0"
     }, conf.attr, attr, svgProps, {
       className: className,

@@ -31,14 +31,9 @@ async function main() {
       await taskCommon.writeEntryPoints(allOpt);
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
-      console.log("=============");
-      await taskCommon.writePackageJson(
-        { name: "@glhf-libs/test-icon" },
-        allOpt
-      );
-      console.log("=============");
-
-      // await taskCommon.copyReadme(allOpt);
+      // await taskCommon.writePackageJson({ name: "react-icons" }, allOpt);
+      await taskCommon.writePackageJson({ name: "@glhf-libs/test-icon" }, allOpt);
+      await taskCommon.copyReadme(allOpt);
     });
     await task("@react-icons/all write icons", async () => {
       for (const icon of icons) {
@@ -58,10 +53,10 @@ async function main() {
       await taskCommon.writeIconsManifest(filesOpt);
       await taskCommon.writeLicense(filesOpt);
       await taskCommon.writePackageJson(
-        { name: "@glhf-libs/all-files" },
+        { name: "@react-icons/all-files" },
         filesOpt
       );
-      // await taskCommon.copyReadme(filesOpt);
+      await taskCommon.copyReadme(filesOpt);
     });
     await task("@react-icons/all-files write icons", async () => {
       for (const icon of icons) {
@@ -76,6 +71,7 @@ async function main() {
 
     // write to VERSIONS file
     await task("react-icons_builders build common library", async () => {
+      console.log('filesOpt', filesOpt)
       await taskCommon.buildLib(filesOpt);
       await taskCommon.copyLib(allOpt);
       await taskCommon.copyLib(filesOpt);

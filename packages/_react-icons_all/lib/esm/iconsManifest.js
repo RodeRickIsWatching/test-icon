@@ -1,14 +1,21 @@
 export var IconsManifest = [
   {
     "id": "icon",
-    "name": "Icon",
+    "name": "icon",
     "projectUrl": "",
     "license": "MIT",
     "licenseUrl": ""
   },
   {
     "id": "coin",
-    "name": "Coin",
+    "name": "coin",
+    "projectUrl": "",
+    "license": "MIT",
+    "licenseUrl": ""
+  },
+  {
+    "id": "color",
+    "name": "color",
     "projectUrl": "",
     "license": "MIT",
     "licenseUrl": ""

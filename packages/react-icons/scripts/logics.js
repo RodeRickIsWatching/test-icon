@@ -1,4 +1,6 @@
-const cheerio = require("cheerio");
+var cheerio = require("cheerio");
+if (typeof cheerio != "function") cheerio = require("cheerio").default;
+
 const glob = require("glob-promise");
 const camelcase = require("camelcase");
 const fs = require("fs").promises;
@@ -53,20 +55,17 @@ async function convertIconData(svg, multiColor) {
 
   // convert to [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
   const elementToTree = (/** @type {Cheerio} */ element) => {
-    const _ = element
+    return element
       .filter((_, e) => e.tagName && !["style"].includes(e.tagName))
       .map((_, e) => ({
         tag: e.tagName,
         attr: attrConverter(e.attribs, e.tagName),
         child:
           e.children && e.children.length
-            ? // ? elementToTree(cheerio(e.children))
-              elementToTree(e.children)
+            ? elementToTree(cheerio(e.children))
             : undefined,
       }))
-      // .getIconFiles();
-
-    return _;
+      .get();
   };
 
   const tree = elementToTree($svg);

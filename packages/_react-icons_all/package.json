@@ -1,6 +1,6 @@
 {
   "name": "@glhf-libs/test-icon",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "glhf",
   "license": "MIT",

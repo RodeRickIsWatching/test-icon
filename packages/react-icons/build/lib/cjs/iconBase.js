@@ -41,7 +41,10 @@ function IconBase(props) {
             className = conf.className;
         if (props.className)
             className = (className ? className + ' ' : '') + props.className;
-        return (React.createElement("svg", __assign({ stroke: "currentColor", fill: "currentColor", strokeWidth: "0" }, conf.attr, attr, svgProps, { className: className, style: __assign(__assign({ color: props.color || conf.color }, conf.style), props.style), height: computedSize, width: computedSize, xmlns: "http://www.w3.org/2000/svg" }),
+        return (React.createElement("svg", __assign({ 
+            // stroke="currentColor"
+            // fill="currentColor"
+            strokeWidth: "0" }, conf.attr, attr, svgProps, { className: className, style: __assign(__assign({ color: props.color || conf.color }, conf.style), props.style), height: computedSize, width: computedSize, xmlns: "http://www.w3.org/2000/svg" }),
             title && React.createElement("title", null, title),
             props.children));
     };

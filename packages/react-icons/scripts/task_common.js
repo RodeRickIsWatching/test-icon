@@ -17,8 +17,6 @@ async function writeIconsManifest({ DIST, LIB, rootDir }) {
     licenseUrl: icon.licenseUrl,
   }));
   const manifest = JSON.stringify(writeObj, null, 2);
-
-  console.log("LIB", LIB);
   await fs.writeFile(
     path.resolve(LIB, "esm", "iconsManifest.js"),
     `export var IconsManifest = ${manifest}`,
@@ -30,17 +28,14 @@ async function writeIconsManifest({ DIST, LIB, rootDir }) {
     "utf8"
   );
   await fs.copyFile(
-    path.resolve("src/iconsManifest.d.ts"),
+    "src/iconsManifest.d.ts",
     path.resolve(LIB, "esm", "iconsManifest.d.ts")
   );
   await fs.copyFile(
-    path.resolve("src/iconsManifest.d.ts"),
+    "src/iconsManifest.d.ts",
     path.resolve(LIB, "cjs", "iconsManifest.d.ts")
   );
-  await fs.copyFile(
-    path.resolve("package.json"),
-    path.resolve(LIB, "package.json")
-  );
+  await fs.copyFile("src/package.json", path.resolve(LIB, "package.json"));
 }
 
 async function writeLicense({ DIST, LIB, rootDir }) {
@@ -62,7 +57,6 @@ async function writeLicense({ DIST, LIB, rootDir }) {
 }
 
 async function writeEntryPoints({ DIST, LIB, rootDir }) {
-  console.log("DIST", DIST);
   const generateEntryCjs = function() {
     return `module.exports = require('./lib/cjs/index.js');`;
   };
@@ -145,16 +139,11 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
 }
 
 async function writePackageJson(override, { DIST, LIB, rootDir }) {
-  console.log("override", override);
-  console.log("DIST", DIST);
-  console.log("rootDir", rootDir);
-
   const packageJsonStr = await fs.readFile(
-    path.resolve(rootDir, "./package.json"),
+    path.resolve(rootDir, "package.json"),
     "utf-8"
   );
   let packageJson = JSON.parse(packageJsonStr);
-  console.log("packageJson", packageJson);
 
   delete packageJson.private;
   delete packageJson.dependencies;
@@ -183,7 +172,6 @@ async function buildLib({ DIST, LIB, rootDir }) {
   const execOpt = {
     cwd: rootDir,
   };
-  console.log("execOpt", execOpt);
   await Promise.all([
     exec("yarn tsc && yarn babel ./build/lib/esm -d ./build/lib/esm", execOpt),
     exec("yarn tsc -p ./tsconfig.commonjs.json", execOpt),
