@@ -1074,10 +1074,10 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
-"@glhf-libs/test-icon@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@glhf-libs/test-icon/-/test-icon-0.1.0.tgz#cb1bb04bce459f912d3828b04d596dd5dc3fd010"
-  integrity sha512-3u8/VbnLqEp2E58M29hliPa2IyTivpbNzOanqEamjgcPje9/3jHF/HEHi7tBMC1Qkq6mk/cDFhZNjyWBau1tYA==
+"@glhf-libs/test-icon@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@glhf-libs/test-icon/-/test-icon-0.1.6.tgz#5b1da1a8ccb6b1934e8a645cc7743c75b74e6168"
+  integrity sha512-9Y7oTrRxMdFNYoSKjmCuUhmJcz1PTFLgMY0eZQ1i/+NX0xjN9bYQ9yx7fWyVAZQvItg3jgYBLWy02xUy8AG90A==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"

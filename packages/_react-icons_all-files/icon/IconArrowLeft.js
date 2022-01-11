@@ -1,5 +1,5 @@
 // THIS FILE IS AUTO GENERATED
 var GenIcon = require('../lib').GenIcon
 module.exports.IconArrowLeft = function IconArrowLeft (props) {
-  return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24","fill":"none"},"child":[{"tag":"path","attr":{"fillRule":"evenodd","clipRule":"evenodd","d":"M15.459 4.46969C15.7519 4.76258 15.7519 5.23746 15.459 5.53035L8.9183 12.0711L15.459 18.6118C15.7519 18.9047 15.7519 19.3796 15.459 19.6725C15.1661 19.9654 14.6913 19.9654 14.3984 19.6725L7.32731 12.6014C7.03442 12.3085 7.03442 11.8337 7.32731 11.5408L14.3984 4.46969C14.6913 4.1768 15.1661 4.1768 15.459 4.46969Z"}}]})(props);
+  return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"path","attr":{"fillRule":"evenodd","d":"M15.459 4.47a.75.75 0 010 1.06l-6.54 6.541 6.54 6.54a.75.75 0 01-1.06 1.061l-7.072-7.07a.75.75 0 010-1.061l7.071-7.071a.75.75 0 011.061 0z","clipRule":"evenodd"}}]})(props);
 };

@@ -38,8 +38,8 @@ export function IconBase(props:IconBaseProps & { attr?: {} }): JSX.Element {
 
     return (
       <svg
-        stroke="currentColor"
-        fill="currentColor"
+        // stroke="currentColor"
+        // fill="currentColor"
         strokeWidth="0"
         {...conf.attr}
         {...attr}

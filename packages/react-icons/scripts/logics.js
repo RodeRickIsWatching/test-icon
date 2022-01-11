@@ -20,51 +20,66 @@ async function convertIconData(svg, multiColor) {
   const attrConverter = (
     /** @type {{[key: string]: string}} */ attribs,
     /** @type string */ tagName
-  ) =>
-    attribs &&
-    Object.keys(attribs)
-      .filter(
-        (name) =>
-          ![
+  ) => {
+    return (
+      attribs &&
+      Object.keys(attribs)
+        .filter((name) => {
+          return ![
             "class",
             ...(tagName === "svg"
-              ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"]
+              ? // 需要添加fill
+                [
+                  "xmlns",
+                  "xmlns:xlink",
+                  "xml:space",
+                  "width",
+                  "height",
+                  "fill",
+                  "stroke",
+                ]
               : []), // if tagName is svg remove size attributes
-          ].includes(name)
-      )
-      .reduce((obj, name) => {
-        const newName = camelcase(name);
-        switch (newName) {
-          case "fill":
-            if (
-              attribs[name] === "none" ||
-              attribs[name] === "currentColor" ||
-              multiColor
-            ) {
+          ].includes(name);
+        })
+        .reduce((obj, name) => {
+          const newName = camelcase(name);
+          switch (newName) {
+            case "fill":
+              if (
+                attribs[name] === "none" ||
+                attribs[name] === "currentColor" ||
+                multiColor
+              ) {
+                // 添加属性 multiColor为多色
+                obj[newName] = attribs[name];
+              }
+
+              break;
+            case "pId":
+              break;
+            default:
               obj[newName] = attribs[name];
-            }
-            break;
-          case "pId":
-            break;
-          default:
-            obj[newName] = attribs[name];
-            break;
-        }
-        return obj;
-      }, {});
+              break;
+          }
+          return obj;
+        }, {})
+    );
+  };
 
   // convert to [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
   const elementToTree = (/** @type {Cheerio} */ element) => {
     return element
       .filter((_, e) => e.tagName && !["style"].includes(e.tagName))
-      .map((_, e) => ({
-        tag: e.tagName,
-        attr: attrConverter(e.attribs, e.tagName),
-        child:
-          e.children && e.children.length
-            ? elementToTree(cheerio(e.children))
-            : undefined,
-      }))
+      .map((_, e) => {
+        return {
+          tag: e.tagName,
+          attr: attrConverter(e.attribs, e.tagName),
+          child:
+            e.children && e.children.length
+              ? elementToTree(cheerio(e.children))
+              : undefined,
+        };
+      })
       .get();
   };
 

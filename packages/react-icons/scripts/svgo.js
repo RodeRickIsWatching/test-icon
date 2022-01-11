@@ -3,7 +3,7 @@ const SVGO = require("svgo");
 const svgo = new SVGO({
   plugins: [
     {
-      cleanupAttrs: true,
+      cleanupAttrs: false,
     },
     {
       removeDoctype: true,
@@ -52,7 +52,7 @@ const svgo = new SVGO({
     },
     {
       convertColors: {
-        currentColor: true,
+        currentColor: false,
       },
     },
     {
@@ -68,7 +68,7 @@ const svgo = new SVGO({
       removeNonInheritableGroupAttrs: true,
     },
     {
-      removeUselessStrokeAndFill: true,
+      removeUselessStrokeAndFill: false,
     },
     {
       removeUnusedNS: true,
@@ -106,7 +106,7 @@ const svgo = new SVGO({
     {
       removeAttributesBySelector: {
         selector: "*:not(svg)",
-        attributes: ["stroke"],
+        // attributes: ["stroke"],
       },
     },
     {

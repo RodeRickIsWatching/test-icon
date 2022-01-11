@@ -1,5 +1,5 @@
 // THIS FILE IS AUTO GENERATED
 var GenIcon = require('../lib').GenIcon
 module.exports.IconArrowD = function IconArrowD (props) {
-  return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24","fill":"none"},"child":[{"tag":"path","attr":{"d":"M13.6 16.8667C12.8 17.9333 11.2 17.9333 10.4 16.8667L5.4 10.2C4.41115 8.88152 5.35191 6.99999 7 6.99999L17 6.99999C18.6481 6.99999 19.5889 8.88152 18.6 10.2L13.6 16.8667Z"}}]})(props);
+  return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"path","attr":{"d":"M13.6 16.867a2 2 0 01-3.2 0l-5-6.667C4.411 8.882 5.352 7 7 7h10c1.648 0 2.589 1.882 1.6 3.2l-5 6.667z"}}]})(props);
 };

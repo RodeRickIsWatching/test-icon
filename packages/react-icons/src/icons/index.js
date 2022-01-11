@@ -11,6 +11,7 @@ module.exports = {
         {
           files: path.resolve(__dirname, "./icon/*.svg"),
           formatter: (name) => `${name}`,
+          processWithSVGO: true,
         },
       ],
       projectUrl: "",
@@ -24,7 +25,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "./coin/*.svg"),
           formatter: (name) => `${name}`,
-          processWithSVGO: true,
+          processWithSVGO: false,
+          multiColor: true
         },
       ],
       projectUrl: "",
@@ -38,7 +40,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "./color/*.svg"),
           formatter: (name) => `${name}`,
-          processWithSVGO: true,
+          processWithSVGO: false,
+          multiColor: true
         },
       ],
       projectUrl: "",
