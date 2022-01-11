@@ -1,0 +1,5 @@
+{
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "name": "@glhf-libs/all-files"
+}
