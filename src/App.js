@@ -3,8 +3,7 @@ import styled from "styled-components";
 import * as icons from "./icons";
 import Header from "./components/Header";
 import IconWrapper from "./components/IconWrapper";
-// import {CoinBtc} from '@glhf-libs/test-icon/coin'
-// import * as Icon from '@glhf-libs/test-icon/icon'
+
 import * as coin from "@glhf-libs/test-icon/coin";
 import * as icon from "@glhf-libs/test-icon/icon";
 import * as color from "@glhf-libs/test-icon/color";
@@ -23,6 +22,7 @@ const Container = styled.ul`
 
 class List extends React.Component {
   render() {
+    const allIcons = Object.assign({}, coin, icon, color);
     return (
       <div>
         <Header />
@@ -41,6 +41,22 @@ class List extends React.Component {
         </Container>
         <br></br>
 
+        <h1>all</h1>
+        <Container>
+          {Object.keys(allIcons).map((key, index) => {
+            const Icon = allIcons[key];
+            return (
+              <li key={index}>
+                <IconWrapper>
+                  <Icon size={22}/>
+                  <span onDoubleClick={() => handleCopyIcon(key)}>{key}</span>
+                </IconWrapper>
+              </li>
+            );
+          })}
+        </Container>
+        <br></br>
+
         <h1>coin</h1>
         <Container>
           {Object.keys(coin).map((key, index) => {
@@ -48,7 +64,7 @@ class List extends React.Component {
             return (
               <li key={index}>
                 <IconWrapper>
-                  <Icon />
+                  <Icon size={22}/>
                   <span onDoubleClick={() => handleCopyIcon(key)}>{key}</span>
                 </IconWrapper>
               </li>
@@ -64,7 +80,7 @@ class List extends React.Component {
             return (
               <li key={index}>
                 <IconWrapper>
-                  <Icon />
+                  <Icon size={22}/>
                   <span onDoubleClick={() => handleCopyIcon(key)}>{key}</span>
                 </IconWrapper>
               </li>
@@ -80,7 +96,7 @@ class List extends React.Component {
             return (
               <li key={index}>
                 <IconWrapper>
-                  <Icon />
+                  <Icon size={22}/>
                   <span onDoubleClick={() => handleCopyIcon(key)}>{key}</span>
                 </IconWrapper>
               </li>
