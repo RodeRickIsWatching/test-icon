@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-    name: figma icon automation
     runs-on: ubuntu-latest
     strategy:
       matrix:
