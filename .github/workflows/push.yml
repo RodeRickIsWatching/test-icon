@@ -8,16 +8,16 @@ on:
       - package.json
 
 jobs:
-  icon_automation:
+  build:
     name: figma icon automation
     runs-on: ubuntu-latest
     strategy:
       matrix:
-      node-version: [12.x]
+        node-version: [12.x]
     steps:
-   - uses: actions/checkout@v2
-      with:
-        submodules: true
+    - uses: actions/checkout@v2
+        with:
+          submodules: true
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -36,7 +36,7 @@ jobs:
       run: yarn --immutable
       if: steps.restore-cache.outputs.cache-hit != 'true'
 
-# fetch figma
+  # fetch figma
     - name: Figma Action
       uses: primer/figma-action@v1.0.0-alpha.2
       with:
@@ -44,10 +44,10 @@ jobs:
       env:
         FIGMA_FILE_URL: ${{ secrets.FIGMA_FILE_URL }}
         FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-   
+    
 
-# build
-   - name: Build Packages
+  # build
+    - name: Build Packages
       run: BASE_PATH=/react-icons ./build.sh
     - uses: actions/upload-artifact@v2
       with:
@@ -61,7 +61,7 @@ jobs:
 
 
 
-# publish
+  # publish
     # - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
     # - run: yarn publish
     #   env:
@@ -70,7 +70,7 @@ jobs:
 
     - run: yarn build
 
-# deploy pages
+  # deploy pages
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
