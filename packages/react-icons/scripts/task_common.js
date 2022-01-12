@@ -98,6 +98,10 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
     const firstDir = path.dirname(files[0]);
     const packageJson = findPackage(firstDir, true);
 
+    const publicPackageJson = findPackage(path.resolve(__dirname, '../../../package.json'), true);
+
+    console.log('publicPackageJson', publicPackageJson.version)
+
     let gitVersion;
     if (!packageJson.version) {
       const { stdout } = await exec(
