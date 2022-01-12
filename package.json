@@ -1,6 +1,6 @@
 {
   "name": "@glhf-libs/test-icon",
-  "version": "0.1.7",
+  "version": "0.1.6",
   "description": "Icon automation workflow with Figma",
   "main": "dist/juuust-react-icon.cjs.js",
   "module": "dist/juuust-react-icon.esm.js",
