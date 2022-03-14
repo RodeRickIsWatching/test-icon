@@ -4,9 +4,9 @@ import * as icons from "./icons";
 import Header from "./components/Header";
 import IconWrapper from "./components/IconWrapper";
 
-import * as coin from "@glhf-libs/test-icon/coin";
-import * as icon from "@glhf-libs/test-icon/icon";
-import * as color from "@glhf-libs/test-icon/color";
+import * as coin from "apex-icon/coin";
+import * as icon from "apex-icon/icon";
+import * as color from "apex-icon/color";
 
 const Container = styled.ul`
   display: grid;

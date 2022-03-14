@@ -100,8 +100,6 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
 
     const publicPackageJson = findPackage(path.resolve(__dirname, '../../../package.json'), true);
 
-    console.log('publicPackageJson', publicPackageJson.version)
-
     let gitVersion;
     if (!packageJson.version) {
       const { stdout } = await exec(
@@ -112,7 +110,7 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
 
     versions.push({
       icon,
-      version: packageJson.version || gitVersion,
+      version: publicPackageJson.version || gitVersion,
       count: files.length,
     });
   }

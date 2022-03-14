@@ -32,7 +32,7 @@ async function main() {
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
       // await taskCommon.writePackageJson({ name: "react-icons" }, allOpt);
-      await taskCommon.writePackageJson({ name: "@glhf-libs/test-icon" }, allOpt);
+      await taskCommon.writePackageJson({ name: "apex-icon" }, allOpt);
       await taskCommon.copyReadme(allOpt);
     });
     await task("@react-icons/all write icons", async () => {

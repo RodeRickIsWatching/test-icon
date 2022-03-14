@@ -1,6 +1,6 @@
 {
-  "name": "@glhf-libs/test-icon",
-  "version": "0.1.6",
+  "name": "apex-icon",
+  "version": "0.4.9",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "glhf",
   "license": "MIT",
@@ -9,12 +9,12 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:react-icons/react-icons.git"
+    "url": "git+ssh://git@github.com:RodeRickIsWatching/test-icon.git"
   },
   "bugs": {
-    "url": "https://github.com/react-icons/react-icons/issues"
+    "url": "https://github.com/RodeRickIsWatching/test-icon/issues"
   },
-  "homepage": "https://github.com/react-icons/react-icons#readme",
+  "homepage": "https://github.com/RodeRickIsWatching/juuust-react-icon#readme",
   "peerDependencies": {
     "react": "*"
   }
