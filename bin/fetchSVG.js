@@ -46,6 +46,7 @@ client
     const components = {};
 
     function check(c) {
+      console.log('c', c)
       if (c.type === "COMPONENT") {
         const { name, id } = c;
         const { description = "", key } = data.components[c.id];

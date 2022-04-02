@@ -2300,10 +2300,10 @@ anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-apex-icon@^0.4.8:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/apex-icon/-/apex-icon-0.4.8.tgz#66312550b654562d605f69a27bc5a9b176230e08"
-  integrity sha512-+R42Bd7WQZGtL8ANl+ZRZ/tUDgR4THT/S49Tibhxj8St1vTEVFxpz2FaGIdD09Q130umOHDLRuz5VUz5QCzsUg==
+apex-icon@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/apex-icon/-/apex-icon-0.5.0.tgz#cfbcf8fb3adb347b042621edb30d68b19cc4b8cc"
+  integrity sha512-+h26isr3ghrfYgL4aVgtcFQsXqrbwbnssuv50/baRJJiUDtWTZXcEFnZBijrZ5Agn7j5vSfgL+A61/MOdlMzxA==
 
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
