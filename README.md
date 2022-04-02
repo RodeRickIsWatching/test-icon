@@ -1,26 +1,11 @@
-# 预览页
-https://roderickiswatching.github.io/juuust-react-icon/ 
+1. 编辑.env
+2. yarn fetch
+3. ./build.sh build icon文件
+4. cd 进入 生成的_react-icons_all
+5. 手动发布
 
-# Icon Automation Workflow Using Figma
 
-It's a repository for [Figma Icon Automation Plugin](https://github.com/leadream/figma-icon-automation).
 
-## Development
-Create a `.env` in the root directory. Put your Figma file url and Figma token inside.
+预览 暂时需要发布后在根目录里下载包后 yarn dev
 
-```
-FIGMA_FILE_URL=https://www.figma.com/file/********************/juuust-react-icon
-FIGMA_TOKEN=********************************
-```
-
-### fetch SVG file
-Run `yarn fetch` to fetch SVG files from Figma file. This will pull your SVGs in `./src/svg/`.
-
-### generate React components for icons
-Run `yarn generate` to generate component files from SVG files. This will pull your component files in `./src/icons/`.
-
-### Develop in local
-Run `yarn dev` to develop the application in which you can see all icons.
-
-### Develop in local
-Run `yarn build` to build Pages.
+todo 自动发布、生成预览页、删除冗余代码
