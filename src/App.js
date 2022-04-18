@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import * as icons from "./icons";
+// import * as icons from "./icons";
 import Header from "./components/Header";
 import IconWrapper from "./components/IconWrapper";
 
@@ -26,7 +26,7 @@ class List extends React.Component {
     return (
       <div>
         <Header />
-        <Container>
+        {/* <Container>
           {Object.keys(icons).map((key, index) => {
             const Icon = icons[key];
             return (
@@ -39,7 +39,7 @@ class List extends React.Component {
             );
           })}
         </Container>
-        <br></br>
+        <br></br> */}
 
         <h1>all</h1>
         <Container>

@@ -46,7 +46,6 @@ client
     const components = {};
 
     function check(c) {
-      console.log('c', c)
       if (c.type === "COMPONENT") {
         const { name, id } = c;
         const { description = "", key } = data.components[c.id];
@@ -111,6 +110,7 @@ client
     };
     return queueTasks(
       Object.values(components).map((component) => () => {
+        if(!component.name.includes('icon-')) return null
         return got
           .get(component.image, {
             headers: {
@@ -121,7 +121,7 @@ client
           .then((response) => {
             return ensureDir(join(options.outputDir, options.format)).then(
               () => {
-                const type = component.name.split("-")[0];
+                const type = component.name.includes('icon-color') ? 'color' : component.name.split("-")[0];
                 ensureDir(join(options.outputDir, options.format, type)).then(
                   () => {
                     ensureDir(

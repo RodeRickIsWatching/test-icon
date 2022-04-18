@@ -1,6 +1,6 @@
 {
   "name": "apex-icon",
-  "version": "0.5.0",
+  "version": "0.5.3",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "glhf",
   "license": "MIT",

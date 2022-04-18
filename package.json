@@ -44,7 +44,7 @@
   "license": "MIT",
   "dependencies": {
     "@glhf-libs/test-icon": "^0.1.6",
-    "apex-icon": "^0.5.0",
+    "apex-icon": "^0.5.3",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
