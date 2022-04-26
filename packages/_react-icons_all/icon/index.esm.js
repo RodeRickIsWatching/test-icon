@@ -12,6 +12,9 @@ export function IconARight (props) {
 export function IconAUp (props) {
   return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"path","attr":{"d":"M13 7.83l3.236 3.227a.5.5 0 00.707 0l.703-.703a.5.5 0 000-.708l-5.292-5.292a.5.5 0 00-.708 0L6.354 9.646a.5.5 0 000 .708l.703.703a.5.5 0 00.707 0L11 7.83V19.5a.5.5 0 00.5.5h1a.5.5 0 00.5-.5V7.83z"}}]})(props);
 };
+export function IconAdd (props) {
+  return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"path","attr":{"fillRule":"evenodd","d":"M13 5a1 1 0 10-2 0v6H5a1 1 0 100 2h6v6a1 1 0 102 0v-6h6a1 1 0 100-2h-6V5z","clipRule":"evenodd"}}]})(props);
+};
 export function IconArrowD (props) {
   return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"path","attr":{"d":"M13.6 16.25c-.8 1-2.4 1-3.2 0L5.404 10c-.988-1.236-.048-3 1.6-3h9.994c1.648 0 2.588 1.764 1.6 3l-4.998 6.25z"}}]})(props);
 };
@@ -104,6 +107,9 @@ export function IconMainnet (props) {
 };
 export function IconMedium (props) {
   return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"path","attr":{"fillOpacity":".3","fillRule":"evenodd","d":"M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm.96-12.108c0 2.357-1.893 4.268-4.23 4.268-2.336 0-4.23-1.911-4.23-4.268 0-2.356 1.894-4.267 4.23-4.267 2.337 0 4.23 1.91 4.23 4.267zm4.642 0c0 2.219-.947 4.018-2.116 4.018-1.168 0-2.115-1.8-2.115-4.018s.947-4.017 2.115-4.017c1.169 0 2.116 1.798 2.116 4.017zm1.898 0c0 1.987-.333 3.6-.744 3.6-.41 0-.744-1.612-.744-3.6 0-1.987.333-3.599.744-3.599.41 0 .744 1.612.744 3.6z","clipRule":"evenodd"}}]})(props);
+};
+export function IconMinus (props) {
+  return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"rect","attr":{"width":"16","height":"2","x":"4","y":"11","rx":"1"}}]})(props);
 };
 export function IconMore (props) {
   return GenIcon({"tag":"svg","attr":{"viewBox":"0 0 24 24"},"child":[{"tag":"path","attr":{"d":"M4 12a2 2 0 114 0 2 2 0 01-4 0zm6 0a2 2 0 114 0 2 2 0 01-4 0zm6 0a2 2 0 114 0 2 2 0 01-4 0z"}}]})(props);
